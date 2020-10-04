@@ -12,6 +12,7 @@ import {
 import React, { Component } from "react";
 import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
+import { Label, Table } from "semantic-ui-react";
 import { styles } from "./style";
 import dataQuest from "../../data/quest.json";
 import dataSkill from "../../data/skills.json";
@@ -102,6 +103,35 @@ class MainPage extends Component {
               ))}
           </Grid>
           <Grid xs={12} sm={0}></Grid>
+        </Grid>
+        <Grid container style={{ padding: "50px" }}>
+          <Table celled>
+            <Table.Body>
+              {dataQuest
+                .sort((a, b) => a.quest - b.quest)
+                .reverse()
+                .map((info, index) => (
+                  <Table.Row>
+                    <Table.Cell>
+                      {index === 0 ? (
+                        <Label ribbon>First</Label>
+                      ) : index === 1 ? (
+                        <Label ribbon>Second</Label>
+                      ) : index === 2 ? (
+                        <Label ribbon>Third</Label>
+                      ) : (
+                        <Label>{index + 1}</Label>
+                      )}
+                    </Table.Cell>
+                    <Table.Cell>
+                      <Avatar src={info.img} />
+                    </Table.Cell>
+                    <Table.Cell>{info.name}</Table.Cell>
+                    <Table.Cell>Quest: {info.quest}</Table.Cell>
+                  </Table.Row>
+                ))}
+            </Table.Body>
+          </Table>
         </Grid>
       </div>
     );
