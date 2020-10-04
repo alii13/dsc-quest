@@ -48,15 +48,19 @@ class MainPage extends Component {
           </Grid>
         </Grid>
         {/**Display of cards */}
-        <Grid container>
-          <Grid xs={0} sm={12}>
+        <Grid container style={{ paddingTop: "100px" }}>
+          <Grid xs={0} sm={12} style={{ textAlign: "center" }}>
             {dataQuest
               .sort((a, b) => a.quest - b.quest)
               .slice(-3)
               .map((info, index) => (
                 <Card
                   className={classes.myCards}
-                  style={{ textAlign: "center", paddingTop: "10px" }}
+                  style={{
+                    textAlign: "center",
+                    paddingTop: "10px",
+                    display: "inline-block",
+                  }}
                 >
                   <Badge
                     overlap="circle"

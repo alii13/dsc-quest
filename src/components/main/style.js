@@ -26,13 +26,13 @@ const styles = (theme) => ({
       display: "block",
       width: "270px",
       marginLeft: "10px",
-      float: "left",
+      //   float: "left",
     },
     [theme.breakpoints.up("md")]: {
       display: "block",
       width: "300px",
       marginLeft: "10px",
-      float: "left",
+      //   float: "left",
     },
   },
 });
