@@ -86,8 +86,6 @@ class MainPage extends Component {
                     />
                   </Badge>
                   <br />
-
-                  {/* <Divider /> */}
                   <p>{info.name}</p>
                   <br />
 
@@ -107,29 +105,53 @@ class MainPage extends Component {
         <Grid container style={{ padding: "50px" }}>
           <Table celled>
             <Table.Body>
-              {dataQuest
-                .sort((a, b) => a.quest - b.quest)
-                .reverse()
-                .map((info, index) => (
-                  <Table.Row>
-                    <Table.Cell>
-                      {index === 0 ? (
-                        <Label ribbon>First</Label>
-                      ) : index === 1 ? (
-                        <Label ribbon>Second</Label>
-                      ) : index === 2 ? (
-                        <Label ribbon>Third</Label>
-                      ) : (
-                        <Label>{index + 1}</Label>
-                      )}
-                    </Table.Cell>
-                    <Table.Cell>
-                      <Avatar src={info.img} />
-                    </Table.Cell>
-                    <Table.Cell>{info.name}</Table.Cell>
-                    <Table.Cell>Quest: {info.quest}</Table.Cell>
-                  </Table.Row>
-                ))}
+              {this.state.type === 0
+                ? dataQuest
+                    .sort((a, b) => a.quest - b.quest)
+                    .reverse()
+                    .map((info, index) => (
+                      <Table.Row>
+                        <Table.Cell>
+                          {index === 0 ? (
+                            <Label ribbon>First</Label>
+                          ) : index === 1 ? (
+                            <Label ribbon>Second</Label>
+                          ) : index === 2 ? (
+                            <Label ribbon>Third</Label>
+                          ) : (
+                            <Label>{index + 1}</Label>
+                          )}
+                        </Table.Cell>
+                        <Table.Cell>
+                          <Avatar src={info.img} />
+                        </Table.Cell>
+                        <Table.Cell>{info.name}</Table.Cell>
+                        <Table.Cell>Quest: {info.quest}</Table.Cell>
+                      </Table.Row>
+                    ))
+                : dataSkill
+                    .sort((a, b) => a.skill - b.skill)
+                    .reverse()
+                    .map((info, index) => (
+                      <Table.Row>
+                        <Table.Cell>
+                          {index === 0 ? (
+                            <Label ribbon>First</Label>
+                          ) : index === 1 ? (
+                            <Label ribbon>Second</Label>
+                          ) : index === 2 ? (
+                            <Label ribbon>Third</Label>
+                          ) : (
+                            <Label>{index + 1}</Label>
+                          )}
+                        </Table.Cell>
+                        <Table.Cell>
+                          <Avatar src={info.img} />
+                        </Table.Cell>
+                        <Table.Cell>{info.name}</Table.Cell>
+                        <Table.Cell>Quest: {info.skill}</Table.Cell>
+                      </Table.Row>
+                    ))}
             </Table.Body>
           </Table>
         </Grid>
