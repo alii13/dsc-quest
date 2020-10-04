@@ -1,0 +1,7 @@
+.setHead {
+  background-image: url(./blue_wave.svg);
+  width: 100vw;
+  height: 350px;
+  background-size: cover;
+  padding-top: "200px";
+}
