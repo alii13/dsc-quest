@@ -1,7 +1,140 @@
+
 .setHead {
-  background-image: url(./blue_wave.svg);
+  background-image: url(./header_image.jpg);
+  position: relative;
   width: 100vw;
   height: 350px;
   background-size: cover;
   padding-top: "200px";
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+height: 100%;
+background-color: #00000087;
+}
+.full-size{
+  width: 100%;
+  height: 100%;
+}
+.align-center{
+  display: flex;
+  align-items: center;
+}
+.m-5{
+  margin-left: 20px;
+}
+.navbar{
+  margin: 0 8vw;
+  position: relative;
+}
+.navbar__brand__image{
+  transform: scale(1.3);
+}
+.right__brand{
+height: 35px;
+width: 15vw;
+right: 10%;
+position: absolute;
+}
+.firstCell{
+  width:30px !important;
+  text-align: center;
+}
+.secondCell p{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bolder !important;
+  color: #696969;
+
+}
+.secondCell,.thirdCell{
+  padding: 0 !important;
+  position: relative;
+
+}
+.thirdCell p{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bolder !important;
+  color: #696969;
+}
+.counts{
+  position: absolute;
+  font-size: 1em;
+  margin-left: 5px;
+  padding-top: 3.5px;
+  margin-top: -4px;
+  background-color: #DB4437;;
+  border-radius: 100%;
+  color: white !important;
+  height: 30px;
+  width: 30px;
+}
+.f0 .ribbon{
+  background-color: #0F9D58 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+}
+.secondRibbon{
+  display: flex !important;
+  align-items: center !important;
+  background-color: #F4B400 !important;;
+  color: white !important;
+}
+.thirdRibbon{
+  display: flex !important;
+  align-items: center !important;
+  background-color: #DB4437 !important;;
+  color: white !important;
+}
+.blueRibbon{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: white !important;
+
+}
+.table{
+  width: 75vw !important;
+  margin-top: 10vh !important;
+}
+tr{
+  transform: scale(1);
+  transition: all ease 0.1s;
+}
+tr:hover{
+  background-color:#9bc0fc !important ;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.tableWrapper{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+}
+.blueRibbon p{
+  background-color: #4285F4 !important;;
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: white !important;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+@media(max-width: 576px){
+  .navbar{
+    margin: 0 !important;
+  }
+  .navbar__brand__image{
+    margin-left: 10vw;
+  }
+  .right__navbar__brand{
+    display: none;
+  }
+
 }

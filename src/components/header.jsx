@@ -1,9 +1,12 @@
 import { Grid, Typography, withStyles } from "@material-ui/core";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import cloud from "./googlecloud.png"
+import svg from "./navbar-brand.svg"
 import "./mystyle.css";
 import "animate.css";
 import { styles } from "./style";
+import SocialIcons from "./main/SocialIcons";
 
 class HeaderPage extends Component {
   render() {
@@ -12,7 +15,7 @@ class HeaderPage extends Component {
     return (
       <div>
         <Grid
-          container
+          container className="navbar"
           style={{
             backgroundColor: "white",
             width: "100vw",
@@ -22,42 +25,33 @@ class HeaderPage extends Component {
           }}
         >
           <Grid xs={6}>
-            <a href="https://dsc.community.dev/lovely-professional-university/">
-              <h1 className={classes.root}>
-                <img
-                  src="https://e7.pngegg.com/pngimages/444/418/png-clipart-google-i-o-google-developers-google-chrome-google-chart-api-google-angle-text-thumbnail.png"
-                  alt="googlecloud"
-                  style={{ width: "50px", height: "35px" }}
-                />
-                Developer Student Club
-              </h1>{" "}
-            </a>
+            <div className="header__navbar-brand align-center full-size">
+            <img src={svg} alt="Developer Student Club" className="navbar__brand__image"/>
+            </div>
           </Grid>
-          <Grid xs={6} style={{ textAlign: "right" }}>
-            <a href="https://cloud.google.com/blog/topics/training-certifications/expanding-at-home-learning">
-              <h1 className={classes.second}>
-                <img
-                  src="https://cdn.iconscout.com/icon/free/png-512/google-cloud-2038785-1721675.png"
-                  alt="googlecloud"
-                  className={classes.img}
-                />
-                30 Days of Google Cloud
-              </h1>{" "}
-            </a>
+        
+          <Grid xs={6} style={{ textAlign: "right" }} className="right__navbar__brand">
+          <div className="">
+            <img src={cloud} alt="google cloud" class="right__brand"/>
+            </div>
           </Grid>
         </Grid>
+        
         <div
           className="setHead"
-          style={{ paddingTop: "100px", paddingLeft: "50px" }}
+         
         >
-          <Grid container>
-            <p className="animate__animated animate__backInLeft">
-              <p className={classes.lpu}>
-                Lovely Professional University <br />
-                30 Days of Google Cloud Ranking
-              </p>
+          <div className="overlay">
+          
+          <Grid container className="full-size align-center">
+          <p className="animate__animated animate__backInLeft m-5">
+              <h1 className={classes.lpu}>
+                Lovely Professional University
+              </h1>
+              <SocialIcons/>
             </p>
           </Grid>
+        </div>
         </div>
       </div>
     );
